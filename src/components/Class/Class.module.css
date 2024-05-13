@@ -1,0 +1,80 @@
+.classCard {
+  position: relative;
+  height: 250px;
+  background-color: transparent;
+  border: 1px solid rgb(171, 171, 171);
+  border-radius: 10px;
+}
+
+.classCard:hover,
+.classCard:focus {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.topInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 15px;
+  border-bottom: 1px solid rgb(171, 171, 171);
+  border-radius: 10px 10px 0 0;
+  background-color: rgb(104, 248, 200);
+}
+
+.classTitle {
+  width: 250px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.classDescription {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.classTutor {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tutor {
+  position: absolute;
+  right: 20px;
+  transform: translate(0, -50%);
+  width: 70px;
+  height: 70px;
+  background-color: rgb(166, 115, 211);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  color: white;
+}
+
+.quickActionsBtn {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.quickActionsBtn:hover,
+.quickActionsBtn:focus {
+  background-color: rgba(0, 0, 0, 0.065);
+}
+
+.quickActionsIcon {
+  color: white;
+  width: 25px;
+  height: 25px;
+}

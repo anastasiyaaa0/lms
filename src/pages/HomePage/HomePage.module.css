@@ -1,0 +1,39 @@
+.container {
+  max-width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.764), rgba(0, 0, 0, 0.764)),
+    url(../../../public/img/classroom.png);
+  background-size: cover;
+  padding: 50px;
+}
+
+.homePageGreeting {
+  margin: 0;
+  text-align: center;
+  font-size: 80px;
+  color: white;
+  line-height: 0;
+  letter-spacing: 0.02em;
+  margin-top: 250px;
+  margin-bottom: 150px;
+}
+
+.goStudyLink {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  padding: 20px;
+  background-color: rgba(29, 119, 222, 0.709);
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: white;
+}
+
+.goStudyLink:hover,
+.goStudyLink:active {
+  background-color: rgb(31, 116, 212);
+}
