@@ -2,6 +2,7 @@ import css from '../SideBar/SideBar.module.css';
 import { MdHomeFilled } from 'react-icons/md';
 import { MdOutlinePeopleAlt } from 'react-icons/md';
 import { PiStudentFill } from 'react-icons/pi';
+import { MdArrowRight } from 'react-icons/md';
 import { NavLink } from 'react-router-dom';
 
 export default function SideBar() {
@@ -18,6 +19,7 @@ export default function SideBar() {
         </li>
         <li className={css.sidebarNavListItem}>
           <div className={css.sidebarCourseBillet}>
+            <MdArrowRight className={css.accordeonArrow} />
             <MdOutlinePeopleAlt className={css.sidebarIcon} />
             <p>Курси, які я викладаю</p>
           </div>
@@ -53,6 +55,7 @@ export default function SideBar() {
         </li>
         <li className={css.sidebarNavListItem}>
           <div className={css.sidebarCourseBillet}>
+            <MdArrowRight className={css.accordeonArrow} />
             <PiStudentFill className={css.sidebarIcon} />
             <p>Мої курси</p>
           </div>
