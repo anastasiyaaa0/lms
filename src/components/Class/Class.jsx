@@ -1,13 +1,29 @@
 import css from '../Class/Class.module.css';
-import { BsThreeDotsVertical } from 'react-icons/bs';
+import { LuDelete } from 'react-icons/lu';
+import { useState } from 'react';
+import DeleteConfirmationModal from '../DeleteConfirmationModal/DeleteConfirmationModal';
 
 export default function Class() {
+  const [openClassOptionsModal, setOpenClassOptionsModal] = useState(false);
+
+  const toggleModal = () => {
+    setOpenClassOptionsModal(!openClassOptionsModal);
+  };
+
   return (
     <div className={css.classCard}>
       <div className={css.topInfo}>
-        <button className={css.quickActionsBtn}>
-          <BsThreeDotsVertical className={css.quickActionsIcon} />
-        </button>
+        <div className={css.btnWrapper}>
+          <button onClick={toggleModal} className={css.quickActionsBtn}>
+            <LuDelete className={css.quickActionsIcon} />
+          </button>
+          {openClassOptionsModal && (
+            <DeleteConfirmationModal
+              modalOpen={openClassOptionsModal}
+              handleClose={toggleModal}
+            />
+          )}
+        </div>
         <h3 className={css.classTitle}>ПЕРЕДДИПЛОМНЕ ПРОЕКТУВАННЯ</h3>
         <p className={css.classDescription}>
           Опис класу опис класу опис класуопис класу опис класу
