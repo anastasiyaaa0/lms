@@ -1,7 +1,7 @@
 .addClassMenu {
   position: absolute;
-  right: 50%;
-  top: 80%;
+  right: 110px;
+  top: 40px;
   width: 280px;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);

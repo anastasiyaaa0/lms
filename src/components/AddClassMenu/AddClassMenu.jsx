@@ -1,33 +1,14 @@
 import css from './AddClassMenu.module.css';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import CreateClassForm from '../CreateClassForm/CreateClassForm';
 import JoinClassForm from '../JoinClassForm/JoinClassForm';
-// import ModalWindow from '../ModalWindow/ModalWindow';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
 
 export default function AddClassMenu({ isOpen, onClose }) {
   const [openCreateCourseForm, setCreateCourseForm] = useState(false);
   const [openJoinCourseForm, setJoinCourseForm] = useState(false);
-  // const modalRef = useRef();
-
-  // useEffect(() => {
-  //   const handleClickOutside = event => {
-  //     if (
-  //       !openCreateCourseForm &&
-  //       modalRef.current &&
-  //       !modalRef.current.contains(event.target)
-  //     ) {
-  //       onClose();
-  //     }
-  //   };
-
-  //   if (isOpen) {
-  //     document.addEventListener('click', handleClickOutside, true);
-  //   }
-
-  //   return () => {
-  //     document.removeEventListener('click', handleClickOutside, true);
-  //   };
-  // }, [isOpen, onClose, modalRef]);
 
   const toggleOpenCreateClassForm = () => {
     if (openCreateCourseForm) onClose();
@@ -41,22 +22,31 @@ export default function AddClassMenu({ isOpen, onClose }) {
 
   return (
     <>
-      <div
-        className={css.addClassMenu}
-        //  ref={modalRef}
+      <Modal
+        open={isOpen}
+        onClose={onClose}
+        BackdropComponent={Backdrop}
+        BackdropProps={{ sx: { backgroundColor: 'transparent' } }}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
       >
-        <ul className={css.optionsList}>
-          <li onClick={toggleOpenJoinClassForm} className={css.optionsListItem}>
-            Приєднатися до курсу
-          </li>
-          <li
-            onClick={toggleOpenCreateClassForm}
-            className={css.optionsListItem}
-          >
-            Створити курс
-          </li>
-        </ul>
-      </div>
+        <Box className={css.addClassMenu}>
+          <ul className={css.optionsList}>
+            <li
+              onClick={toggleOpenJoinClassForm}
+              className={css.optionsListItem}
+            >
+              Приєднатися до курсу
+            </li>
+            <li
+              onClick={toggleOpenCreateClassForm}
+              className={css.optionsListItem}
+            >
+              Створити курс
+            </li>
+          </ul>
+        </Box>
+      </Modal>
 
       {openCreateCourseForm && (
         <CreateClassForm
