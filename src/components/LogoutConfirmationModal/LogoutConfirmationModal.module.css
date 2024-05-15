@@ -1,0 +1,40 @@
+.modalWrapper {
+  padding: 10px;
+}
+
+.modalHeader {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.buttonsSet {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.modalBtn {
+  padding: 10px 5px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: transparent;
+  border-radius: 5px;
+  border: none;
+  color: inherit;
+}
+
+.modalBtn:hover,
+.modalBtn:focus {
+  background-color: rgb(230, 230, 230);
+}
+
+.btnCancel {
+  color: rgb(0, 132, 247);
+}
+
+.btnCancel:hover,
+.btnCancel:focus {
+  background-color: rgba(158, 210, 255, 0.341);
+}

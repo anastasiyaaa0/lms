@@ -1,11 +1,13 @@
-import css from '../AddClassModal/AddClassModal.module.css';
+import css from './AddClassMenu.module.css';
 import { useEffect, useRef, useState } from 'react';
 import CreateClassForm from '../CreateClassForm/CreateClassForm';
+import JoinClassForm from '../JoinClassForm/JoinClassForm';
 // import ModalWindow from '../ModalWindow/ModalWindow';
 
-export default function AddClassModal({ isOpen, onClose }) {
+export default function AddClassMenu({ isOpen, onClose }) {
   const [openCreateCourseForm, setCreateCourseForm] = useState(false);
-  const modalRef = useRef();
+  const [openJoinCourseForm, setJoinCourseForm] = useState(false);
+  // const modalRef = useRef();
 
   // useEffect(() => {
   //   const handleClickOutside = event => {
@@ -28,18 +30,29 @@ export default function AddClassModal({ isOpen, onClose }) {
   // }, [isOpen, onClose, modalRef]);
 
   const toggleOpenCreateClassForm = () => {
+    if (openCreateCourseForm) onClose();
     setCreateCourseForm(!openCreateCourseForm);
-    if (openCreateCourseForm) {
-      onClose();
-    }
+  };
+
+  const toggleOpenJoinClassForm = () => {
+    if (openJoinCourseForm) onClose();
+    setJoinCourseForm(!openJoinCourseForm);
   };
 
   return (
     <>
-      <div className={css.addClassModal} ref={modalRef}>
+      <div
+        className={css.addClassMenu}
+        //  ref={modalRef}
+      >
         <ul className={css.optionsList}>
-          <li className={css.optionsListItem}>Приєднатися до курсу</li>
-          <li onClick={toggleOpenForm} className={css.optionsListItem}>
+          <li onClick={toggleOpenJoinClassForm} className={css.optionsListItem}>
+            Приєднатися до курсу
+          </li>
+          <li
+            onClick={toggleOpenCreateClassForm}
+            className={css.optionsListItem}
+          >
             Створити курс
           </li>
         </ul>
@@ -49,6 +62,13 @@ export default function AddClassModal({ isOpen, onClose }) {
         <CreateClassForm
           modalOpen={openCreateCourseForm}
           handleClose={toggleOpenCreateClassForm}
+        />
+      )}
+
+      {openJoinCourseForm && (
+        <JoinClassForm
+          modalOpen={openJoinCourseForm}
+          handleClose={toggleOpenJoinClassForm}
         />
       )}
     </>

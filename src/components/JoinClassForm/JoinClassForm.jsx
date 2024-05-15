@@ -25,6 +25,7 @@ export default function JoinClassForm({ modalOpen, handleClose }) {
     //     })
     //   );
     actions.resetForm();
+    handleClose();
   };
 
   return (

@@ -55,7 +55,12 @@
   height: 25px;
 }
 
+.logoutArea {
+  position: relative;
+}
+
 .userProfile {
+  /* position: relative; */
   width: 35px;
   height: 35px;
   border-radius: 50%;

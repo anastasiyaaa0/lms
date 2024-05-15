@@ -34,6 +34,7 @@ export default function CreateClassForm({ modalOpen, handleClose }) {
     //     })
     //   );
     actions.resetForm();
+    handleClose();
   };
 
   return (

@@ -1,22 +1,21 @@
-import css from '../DeleteConfirmationModal/DeleteConfirmationModal.module.css';
+import css from './LogoutConfirmationModal.module.css';
 import ModalWindow from '../ModalWindow/ModalWindow';
 
-export default function DeleteConfirmationModal({ modalOpen, handleClose }) {
+export default function LogoutConfirmationModal({ modalOpen, handleClose }) {
   return (
     <ModalWindow modalOpen={modalOpen} handleClose={handleClose}>
       <div className={css.modalWrapper}>
-        <h3 className={css.modalHeader}>Скасувати курс АтаППЗ 220 КР?</h3>
-        <p className={css.modalMessage}>Вас буде вилучено з цього курсу.</p>
+        <h3 className={css.modalHeader}>Вийти з облікового запису?</h3>
         <div className={css.buttonsSet}>
           <button type="button" onClick={handleClose} className={css.modalBtn}>
             Скасувати
           </button>
           <button
             type="button"
-            // onClick={handleСancel}
+            // onClick={handleLogout}
             className={`${css.modalBtn} ${css.btnCancel}`}
           >
-            Скасувати реєстрацію
+            Підтвердити вихід
           </button>
         </div>
       </div>
