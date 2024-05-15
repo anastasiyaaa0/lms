@@ -9,7 +9,7 @@ export default function LoginPage() {
       <DocumentTitle>Registration</DocumentTitle>
       <section className={css.container}>
         <img
-          src="/public/img/students_login.png"
+          src="/img/students_login.png"
           alt="students"
           className={css.img}
         ></img>

@@ -9,7 +9,7 @@ export default function RegistrationPage() {
       <DocumentTitle>Registration</DocumentTitle>
       <section className={css.container}>
         <img
-          src="/public/img/students_register.png"
+          src="/img/students_register.png"
           alt="students"
           className={css.img}
         ></img>
