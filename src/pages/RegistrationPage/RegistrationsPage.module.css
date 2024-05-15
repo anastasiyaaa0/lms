@@ -1,0 +1,25 @@
+.container {
+  padding: 70px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 900px;
+  height: auto;
+}
+
+.text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1b1b1baa;
+}
+
+.link {
+  font-weight: 700;
+  color: #474af1;
+}
