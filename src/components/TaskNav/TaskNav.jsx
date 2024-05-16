@@ -11,17 +11,17 @@ export default function TaskNav() {
     <div className={css.navigation}>
       <ul className={css.navigationList}>
         <li>
-          <NavLink className={buildLinkClass} to="/classes/:classId">
+          <NavLink className={buildLinkClass} to="/authorized/classes/:classId">
             Стрічка
           </NavLink>
         </li>
         <li>
-          <NavLink className={buildLinkClass} to="/classes/:classId/tasks">
-            Завдання
+          <NavLink className={buildLinkClass} to="rating">
+            Оцінки
           </NavLink>
         </li>
         <li>
-          <NavLink className={buildLinkClass} to="/classes/:classId/students">
+          <NavLink className={buildLinkClass} to="students">
             Люди
           </NavLink>
         </li>

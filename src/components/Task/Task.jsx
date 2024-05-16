@@ -1,13 +1,18 @@
 import css from './Task.module.css';
-import { GrTasks } from 'react-icons/gr';
+import { FaTasks } from 'react-icons/fa';
 
 export default function Task() {
   return (
     <div className={css.task}>
-      <GrTasks className={css.taskIcon} />
+      <div className={css.taskPin}>
+        <FaTasks className={css.taskIcon} />
+      </div>
       <div className={css.taskInfo}>
-        <p className={css.taskMessage}></p>
-        <p className={css.taskDate}></p>
+        <p className={css.taskMessage}>
+          Андрій Іванович Гізун публікує нове завдання: Лабораторна робота 3.
+          Вивчення методик аналізу програмного
+        </p>
+        <p className={css.taskDate}>25 березня</p>
       </div>
     </div>
   );
