@@ -8,7 +8,7 @@ export default function HomePage() {
       <DocumentTitle>Home</DocumentTitle>
       <section className={css.container}>
         <h2 className={css.homePageGreeting}>Classroom</h2>
-        <NavLink to="/classes" className={css.goStudyLink}>
+        <NavLink to="/authorized" className={css.goStudyLink}>
           Study!
         </NavLink>
       </section>
