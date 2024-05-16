@@ -1,0 +1,41 @@
+.navigation {
+  position: sticky;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px 20px;
+  background-color: white;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.navigationList {
+  display: flex;
+  gap: 70px;
+}
+
+.link {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: inherit;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #222222;
+  opacity: 0;
+}
+
+.link.isActive::after {
+  opacity: 1;
+}
