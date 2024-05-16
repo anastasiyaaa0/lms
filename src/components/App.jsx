@@ -7,6 +7,7 @@ import HomePage from '../pages/HomePage/HomePage';
 import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
 import LoginPage from '../pages/LoginPage/LoginPage';
 import ClassesPage from '../pages/ClassesPage/ClassesPage';
+import ClassPage from '../pages/ClassPage/ClassPage';
 import NotFoundPage from '../pages/NotFoundPage/NotFoundPage';
 
 export default function App() {
@@ -38,6 +39,11 @@ export default function App() {
         <Route path="/login" element={<LoginPage />}></Route>
         <Route path="/register" element={<RegistrationPage />}></Route>
         <Route path="/classes" element={<ClassesPage />}></Route>
+
+        <Route path="/classes/:classId" element={<ClassPage />}>
+          {/* <Route path="tasks" element={<TasksPage />} />
+          <Route path="students" element={<Students />} /> */}
+        </Route>
         {/*  */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

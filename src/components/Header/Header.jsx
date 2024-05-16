@@ -6,7 +6,11 @@ import LogOutMenu from '../LogoutMenu/LogoutMenu';
 
 import { useState } from 'react';
 
-export default function Header({ handleShowSideBar }) {
+export default function Header({
+  handleShowSideBar,
+  showAddClassBtn = true,
+  children,
+}) {
   const [openAddClassMenu, setOpenAddClassMenu] = useState(false);
   const [openLogoutMenu, setOpenLogoutMenu] = useState(false);
 
@@ -28,10 +32,11 @@ export default function Header({ handleShowSideBar }) {
         >
           <RxHamburgerMenu className={css.hamburgerMenuIcon} />
         </button>
-        <p className={css.headerLogo}>EduHub📚</p>
+        <h2 className={css.headerLogo}>EduHub📚</h2>
+        <h2 className={css.classTitle}>{children}</h2>
       </div>
       <div className={css.headerRightArea}>
-        <div className={css.headerAddClassBtn}>
+        {showAddClassBtn && (
           <button
             type="button"
             onClick={toggleAddClassMenu}
@@ -39,13 +44,13 @@ export default function Header({ handleShowSideBar }) {
           >
             <IoAdd className={css.addClassIcon} />
           </button>
-          {openAddClassMenu && (
-            <AddClassMenu
-              isOpen={openAddClassMenu}
-              onClose={toggleAddClassMenu}
-            />
-          )}
-        </div>
+        )}
+        {openAddClassMenu && (
+          <AddClassMenu
+            isOpen={openAddClassMenu}
+            onClose={toggleAddClassMenu}
+          />
+        )}
         <div className={css.logoutArea}>
           <div onClick={toggleLogoutMenu} className={css.userProfile}></div>
           {openLogoutMenu && (

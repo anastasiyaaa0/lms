@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 export default function LoginPage() {
   return (
     <>
-      <DocumentTitle>Registration</DocumentTitle>
+      <DocumentTitle>Login</DocumentTitle>
       <section className={css.container}>
         <img
           src="/img/students_login.png"
