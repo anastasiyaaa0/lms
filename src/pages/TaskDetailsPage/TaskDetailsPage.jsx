@@ -1,10 +1,11 @@
 import DocumentTitle from '../../components/DocumentTitle/DocumentTitle';
+import TaskDetailsComponent from '../../components/TaskDetailsComponent/TaskDetailsComponent';
 
 export default function TaskDetailsPage() {
   return (
     <>
       <DocumentTitle>Деталі завдання</DocumentTitle>
-      <h2>DETAILS</h2>
+      <TaskDetailsComponent />
     </>
   );
 }

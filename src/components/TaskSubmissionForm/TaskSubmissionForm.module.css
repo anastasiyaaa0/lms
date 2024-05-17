@@ -1,0 +1,92 @@
+.form {
+  box-sizing: border-box;
+  width: 360px;
+  padding: 40px 25px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10%;
+}
+
+.formInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.formHeader {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.text {
+  font-size: 18px;
+}
+
+.chooseFilesBtn {
+  width: 100%;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e9e9e9;
+  font-size: 18px;
+  font-weight: 500;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.files {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fileName {
+  width: 250px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.formDeleteFileBtn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+}
+
+.formDeleteFileIcon {
+  width: 25px;
+  height: 25px;
+  color: #a1a1a1;
+}
+
+.formSubmitBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1f1f1f;
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.formSubmitBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.formSubmitBtn:hover {
+  background-color: rgb(0, 117, 220);
+}

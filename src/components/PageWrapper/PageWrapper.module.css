@@ -1,6 +1,7 @@
 .container {
   position: relative;
   margin-left: 330px;
+  padding-top: 60px;
 }
 
 .containerExpanded {

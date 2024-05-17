@@ -55,6 +55,11 @@
   height: 35px;
   border-radius: 50%;
   background-color: rgb(208, 208, 221);
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .headerLogo {

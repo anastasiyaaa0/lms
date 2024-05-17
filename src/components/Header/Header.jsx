@@ -52,7 +52,9 @@ export default function Header({
           />
         )}
         <div className={css.logoutArea}>
-          <div onClick={toggleLogoutMenu} className={css.userProfile}></div>
+          <div onClick={toggleLogoutMenu} className={css.userProfile}>
+            A
+          </div>
           {openLogoutMenu && (
             <LogOutMenu isOpen={openLogoutMenu} onClose={toggleLogoutMenu} />
           )}

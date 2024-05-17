@@ -1,0 +1,52 @@
+.container {
+  padding: 40px 0;
+  margin: 0 auto;
+  width: 1220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task {
+  width: 800px;
+}
+
+.taskInfo {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.taskName {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.taskAuthorDate {
+  font-size: 16px;
+}
+
+.taskMarkDueDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mark {
+  font-size: 16px;
+}
+
+.highlighted {
+  font-weight: 600;
+}
+
+.dueDate {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 16px;
+}
