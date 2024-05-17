@@ -1,7 +1,4 @@
 .taskAssessmentList {
-  width: 1000px;
-  margin: 0 auto;
-  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   gap: 25px;

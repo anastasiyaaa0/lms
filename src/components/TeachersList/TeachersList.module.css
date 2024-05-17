@@ -1,0 +1,11 @@
+.container {
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+.teachersHeader {
+  font-size: 36px;
+  padding: 0 0 20px 20px;
+  border-bottom: 1px solid #1b1b1b;
+  margin-bottom: 10px;
+}

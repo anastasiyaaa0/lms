@@ -1,5 +1,6 @@
 import DocumentTitle from '../../components/DocumentTitle/DocumentTitle';
 import TaskNav from '../../components/TaskNav/TaskNav';
+import ClassComponentWrapper from '../../components/ClassComponentWrapper/ClassComponentWrapper';
 import { Outlet } from 'react-router-dom';
 
 export default function ClassPage() {
@@ -7,7 +8,9 @@ export default function ClassPage() {
     <>
       <DocumentTitle>Class</DocumentTitle>
       <TaskNav />
-      <Outlet />
+      <ClassComponentWrapper>
+        <Outlet />
+      </ClassComponentWrapper>
     </>
   );
 }
