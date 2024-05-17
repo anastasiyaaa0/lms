@@ -25,7 +25,7 @@ export default function SideBar() {
         <li className={css.sidebarNavListItem}>
           <div className={css.sidebarCourseBillet}>
             <MdHomeFilled className={css.sidebarIcon} />
-            <NavLink to="/classes" className={css.homeLink}>
+            <NavLink to="/authorized/classes" className={css.homeLink}>
               Головна
             </NavLink>
           </div>
@@ -74,19 +74,19 @@ export default function SideBar() {
           </div>
           {isShownMyClasses && (
             <ul className={css.sidebarCoursesList}>
-              <li className={css.sidebarCoursesListItem}>
+              <li>
                 <SidebarClassComponent />
               </li>
-              <li className={css.sidebarCoursesListItem}>
+              <li>
                 <SidebarClassComponent />
               </li>
-              <li className={css.sidebarCoursesListItem}>
+              <li>
                 <SidebarClassComponent />
               </li>
-              <li className={css.sidebarCoursesListItem}>
+              <li>
                 <SidebarClassComponent />
               </li>
-              <li className={css.sidebarCoursesListItem}>
+              <li>
                 <SidebarClassComponent />
               </li>
             </ul>

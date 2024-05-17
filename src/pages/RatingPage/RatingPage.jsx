@@ -1,14 +1,13 @@
 import DocumentTitle from '../../components/DocumentTitle/DocumentTitle';
+import UserInfoHeader from '../../components/UserInfoHeader/UserInfoHeader';
+import RatingList from '../../components/RatingList/RatingList';
 
 export default function RatingPage() {
   return (
     <>
       <DocumentTitle>Rating</DocumentTitle>
-      <h2>RATING</h2>
-      <h2>RATING</h2>
-      <h2>RATING</h2>
-      <h2>RATING</h2>
-      <h2>RATING</h2>
+      <UserInfoHeader />
+      <RatingList />
     </>
   );
 }

@@ -62,19 +62,6 @@
   margin-bottom: 20px;
 }
 
-.sidebarCoursesListItem {
-  display: flex;
-  gap: 12px;
-  padding: 5px 0 5px 30px;
-  align-items: center;
-  border-radius: 0 20px 20px 0;
-}
-
-.sidebarCoursesListItem:hover,
-.sidebarCoursesListItem:focus {
-  background-color: rgb(242, 242, 242);
-}
-
 .accordeonArrow {
   color: #5d5d5d;
   width: 30px;

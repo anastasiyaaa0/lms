@@ -1,0 +1,55 @@
+.taskAssessmentList {
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.taskAssessmentListItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.taskAssessmentListItem:hover,
+.taskAssessmentListItem:focus {
+  border: none;
+  border-radius: 20px;
+  background-color: rgb(242, 242, 242);
+}
+
+.taskInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.taskName {
+  width: 700px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.taskDueDate {
+  font-size: 16px;
+}
+
+.markInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.mark {
+  font-weight: 600;
+}
+
+.lateNotice {
+  font-size: 14px;
+}

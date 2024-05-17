@@ -28,10 +28,13 @@ export default function App() {
           <Route path="classes/:classId" element={<ClassPage />}>
             <Route index element={<Navigate to="tasks" replace />} />
             <Route path="tasks" element={<TasksPage />} />
-            <Route path="details" element={<TaskDetailsPage />} />
             <Route path="rating" element={<RatingPage />} />
             <Route path="students" element={<ClassStudentsPage />} />
           </Route>
+          <Route
+            path="classes/:classId/details"
+            element={<TaskDetailsPage />}
+          />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

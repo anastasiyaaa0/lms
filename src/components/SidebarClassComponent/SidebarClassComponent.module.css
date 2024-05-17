@@ -1,3 +1,21 @@
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.coursesListItem {
+  display: flex;
+  gap: 12px;
+  padding: 5px 0 5px 30px;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+}
+
+.coursesListItem:hover,
+.coursesListItem:focus {
+  background-color: rgb(242, 242, 242);
+}
+
 .courseIcon {
   width: 40px;
   height: 40px;

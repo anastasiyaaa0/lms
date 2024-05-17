@@ -1,0 +1,28 @@
+.container {
+  box-sizing: border-box;
+  width: 1000px;
+  margin: 100px auto 40px;
+  background-color: white;
+  display: flex;
+  gap: 30px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #1b1b1b;
+}
+
+.userPin {
+  width: 80px;
+  height: 80px;
+  background-color: coral;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+  font-weight: 500;
+  color: white;
+}
+
+.userName {
+  font-size: 30px;
+  font-weight: 500;
+}
