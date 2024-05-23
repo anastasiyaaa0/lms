@@ -28,45 +28,46 @@ export default function TaskSubmissionForm() {
   };
 
   return (
-    <div className={css.form}>
-      <div className={css.formInfo}>
-        <h2 className={css.formHeader}>Ваша робота</h2>
-        <p className={css.text}>Оцінено</p>
+    <form onSubmit={handleSubmit}>
+      <div className={css.form}>
+        <div className={css.formInfo}>
+          <h2 className={css.formHeader}>Ваша робота</h2>
+          <p className={css.text}>Оцінено</p>
+        </div>
+
+        <input
+          type="file"
+          multiple
+          ref={fileInputRef}
+          onChange={handleFileChange}
+          style={{ display: 'none' }}
+        />
+        <button onClick={handleButtonClick} className={css.chooseFilesBtn}>
+          Вибрати файли
+        </button>
+
+        <ul className={css.files}>
+          {files.map((file, index) => (
+            <li key={index} className={css.file}>
+              <p className={css.fileName}> {file.name}</p>
+              <button
+                className={css.formDeleteFileBtn}
+                onClick={() => removeFile(index)}
+              >
+                <IoClose className={css.formDeleteFileIcon} />
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          type="submit"
+          className={css.formSubmitBtn}
+          disabled={!hasFiles}
+        >
+          Надіслати
+        </button>
       </div>
-
-      <input
-        type="file"
-        multiple
-        ref={fileInputRef}
-        onChange={handleFileChange}
-        style={{ display: 'none' }}
-      />
-      <button onClick={handleButtonClick} className={css.chooseFilesBtn}>
-        Вибрати файли
-      </button>
-
-      <ul className={css.files}>
-        {files.map((file, index) => (
-          <li key={index} className={css.file}>
-            <p className={css.fileName}> {file.name}</p>
-            <button
-              className={css.formDeleteFileBtn}
-              onClick={() => removeFile(index)}
-            >
-              <IoClose className={css.formDeleteFileIcon} />
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      <button
-        type="submit"
-        className={css.formSubmitBtn}
-        disabled={!hasFiles}
-        onSubmit={handleSubmit}
-      >
-        Надіслати
-      </button>
-    </div>
+    </form>
   );
 }
